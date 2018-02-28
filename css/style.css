@@ -1,0 +1,171 @@
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.calendar-container table {
+    border-spacing: 0;
+    border-collapse: initial;
+    width: 100%;
+}
+.calendar-container {
+    width:500px;
+    margin:0 auto;
+	background: #fff;
+	border-right:1px solid #d3d3d4;
+	border-bottom:1px solid #d3d3d4;
+}
+.calendar {
+    text-align: center;
+}
+
+.calendar .calendar-title{
+	color:#fff;
+	font-weight:600;
+	font-size:16px;
+	text-align: center;
+	margin:0;
+	margin-bottom:8px;
+}
+.calendar header{
+    position: relative;
+    height:60px;
+    background-color: #008cee;
+    padding:8px 20px;
+}
+.calendar .headers span{font-size:14px;color:#fff;letter-spacing: 2px;;}
+
+.calendar thead {
+    font-weight: 600;
+    text-transform: uppercase;
+   
+}
+.calendar thead tr{
+	 border-bottom:1px solid #d8d8d8;
+}
+.calendar tbody {
+    color: #7c8a95;
+}
+
+.calendar tbody td:hover {
+    border: 2px solid #008cee;
+}
+
+.calendar tbody td.active {
+    border: 2px solid #008cee;
+    color:#008cee;
+}
+
+.calendar thead td{
+	font-size:15px;
+	color:#000;
+	font-weight: normal;
+	
+}
+.calendar td {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    width: 14%;
+    position:relative;
+    font-size:15px;
+}
+.calendar td.event{
+	color:#000;
+}
+.calendar  .current-day {
+    background: #008cee;
+    color: #fff;
+}
+
+.calendar  .event {
+    cursor: pointer;
+    position: relative;
+}
+
+.calendar  .event:after {
+    background: #008cee;
+    border-radius: 50%;
+    bottom: 6px;
+    display: block;
+    content: '';
+    height: 8px;
+    left: 50%;
+    margin: -4px 0 0 -4px;
+    position: absolute;
+    width: 8px;
+}
+
+.calendar  .event.current-day:after {
+    background: #f9f9f9;
+}
+
+.calendar .btn-prev,
+.calendar  .btn-next {
+	height: 33px;
+	margin: -16px;
+	position: absolute;
+	top: 50%;
+	width: 33px;
+}
+
+
+.calendar  .btn-prev {
+    left: 35px;
+    background: url(prev.png) no-repeat 0 0;
+}
+
+.calendar  .btn-next {
+    right: 35px;
+    background: url(next.png) no-repeat 0 0;
+}
+
+.calendar  .list {
+    margin-top: 20px;
+}
+
+.calendar  .close {
+    color: #A4AAAB;
+    margin-top: -15px;
+    margin-right: 10px;
+    float: right;
+}
+
+.calendar  .day-event {
+	top:0;left:0;
+	position:absolute;
+    background-color: rgba(0,0,0,0.5) ;
+    width:100px;
+    padding-bottom: 0px;
+    margin-bottom: 50px;
+    display:none;
+    color: #fff;
+    padding:5px 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+.calendar  .day-event .calender-icon{
+	position: absolute;
+	width:9px;
+	height:25px;
+	background:url(calendar.png) no-repeat 0 0;
+	left:-8px;top:50%;margin-top:-12.5px;
+}
+@media \0screen\,screen\9{
+	.day-event{
+		background-color:#000;
+		filter:Alpha(opacity=50);
+	    position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+	    *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+	}
+}
+.calendar  .day-event dl{
+	font-size:12px;
+}
+.calendar  .day-event dl dd{margin:0;}
